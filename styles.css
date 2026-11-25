@@ -1,0 +1,64 @@
+body {
+background-color: #0a0a0a;
+font-family: 'Inter', sans-serif;
+}
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+width: 8px;
+}
+::-webkit-scrollbar-track {
+background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+background: #333;
+border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+background: #555;
+}
+/* Ambient Glows */
+.ambient-glow {
+position: fixed;
+width: 600px;
+height: 600px;
+background: radial-gradient(circle, rgba(245, 158, 11, 0.03) 0%, rgba(0,0,0,0) 70%);
+pointer-events: none;
+z-index: 0;
+}
+.glow-top { top: -20%; left: -10%; }
+.glow-bottom { bottom: -20%; right: -10%; }
+.glow-center { top: 40%; left: 30%; width: 800px; height: 800px; background: radial-gradient(circle, rgba(30, 30, 40, 0.3) 0%, rgba(0,0,0,0) 70%); }
+/* Utility for hiding scrollbar but allowing scroll */
+.no-scrollbar::-webkit-scrollbar {
+display: none;
+}
+.no-scrollbar {
+-ms-overflow-style: none;
+scrollbar-width: none;
+}
+/* Image Mask for Hero */
+.hero-mask {
+-webkit-mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
+mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
+}
+/* Text Gradient */
+.text-gradient-gold {
+background: linear-gradient(135deg, #ffffff 30%, #fbbf24 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.glass-card {
+background: rgba(20, 20, 20, 0.4);
+backdrop-filter: blur(12px);
+border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.hover-trigger .hover-target {
+opacity: 0;
+transform: translateX(-10px);
+transition: all 0.3s ease;
+}
+.hover-trigger:hover .hover-target {
+opacity: 1;
+transform: translateX(0);
+}
